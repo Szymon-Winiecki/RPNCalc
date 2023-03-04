@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/stackDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="4:\n3:\n2:\n1:\n->"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stackDisplay"
+        app:layout_constraintVertical_bias="0.83">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/drop"
+                style="@style/my_button"
+                android:text="DROP" />
+
+            <Button
+                android:id="@+id/swap"
+                style="@style/my_button"
+                android:text="SWAP" />
+
+            <Button
+                android:id="@+id/allClear"
+                style="@style/my_button"
+                android:text="AC" />
+
+            <Button
+                android:id="@+id/power"
+                style="@style/my_button"
+                android:textAllCaps="false"
+                android:text="x^y" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/undo"
+                style="@style/my_button"
+                android:text="UNDO" />
+
+            <Button
+                android:id="@+id/redo"
+                style="@style/my_button"
+                android:text="REDO" />
+
+            <Button
+                android:id="@+id/delete"
+                style="@style/my_button"
+                android:text="DEL" />
+
+            <Button
+                android:id="@+id/sqrt"
+                style="@style/my_button"
+                android:textAllCaps="false"
+                android:text="√x" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/seven"
+                style="@style/my_button"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/eight"
+                style="@style/my_button"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/nine"
+                style="@style/my_button"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/addition"
+                style="@style/my_button"
+                android:text="+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/four"
+                style="@style/my_button"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/five"
+                style="@style/my_button"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/six"
+                style="@style/my_button"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/subtraction"
+                style="@style/my_button"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/one"
+                style="@style/my_button"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/two"
+                style="@style/my_button"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/three"
+                style="@style/my_button"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/multiplication"
+                style="@style/my_button"
+                android:text="×" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/sign"
+                style="@style/my_button"
+                android:text="+/-" />
+
+            <Button
+                android:id="@+id/zero"
+                style="@style/my_button"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/decimalSeparator"
+                style="@style/my_button"
+                android:text="." />
+
+            <Button
+                android:id="@+id/division"
+                style="@style/my_button"
+                android:text="÷" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/enter"
+                style="@style/My_button_alt"
+                android:theme="@style/My_button_alt"
+                android:text="ENTER" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="4dp"
+        android:text="history: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stackSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="80dp"
+        android:text="stack: 0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
